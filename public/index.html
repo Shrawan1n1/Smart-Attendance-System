@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Attendance System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>📸 Smart Attendance System</h1>
+      <p class="subtitle">Upload a classroom photo to detect and confirm attendance.</p>
+    </header>
+
+    <!-- ── Step 1: Upload ── -->
+    <section class="card" id="upload-section">
+      <h2>Step 1 — Upload Photo</h2>
+
+      <div class="drop-zone" id="drop-zone">
+        <p>Drag & drop a photo here, or</p>
+        <label class="btn" for="file-input">Choose File</label>
+        <input type="file" id="file-input" accept="image/*" hidden />
+        <p id="file-name" class="file-name">No file selected</p>
+      </div>
+
+      <img id="preview" class="preview hidden" alt="Preview" />
+      <button class="btn primary" id="upload-btn" disabled>Analyse Photo</button>
+    </section>
+
+    <!-- ── Step 2: Review results ── -->
+    <section class="card hidden" id="results-section">
+      <h2>Step 2 — Review Detected Students</h2>
+      <p id="detection-summary" class="summary"></p>
+
+      <ul id="student-list" class="student-list"></ul>
+
+      <button class="btn primary" id="confirm-btn">✔ Confirm Attendance</button>
+    </section>
+
+    <!-- ── Step 3: Confirmation ── -->
+    <section class="card hidden" id="confirmed-section">
+      <h2>✅ Attendance Confirmed</h2>
+      <p id="confirmed-summary"></p>
+      <button class="btn" id="reset-btn">Start Over</button>
+    </section>
+
+    <!-- ── Loader & Error ── -->
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <p>Analysing faces…</p>
+    </div>
+    <p id="error-msg" class="error hidden"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
