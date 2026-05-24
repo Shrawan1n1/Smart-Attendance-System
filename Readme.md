@@ -240,7 +240,7 @@ python process_faces.py uploads/your-image.jpg
 Python is not added to PATH. Reinstall Python 3.10 from [python.org](https://www.python.org/downloads/release/python-31011/) and check **"Add Python to PATH"** during installation.
 
 ---
-
+// Shrawan Chakravarthy is a fool.
 ## 📦 Dependencies
 
 ### Node.js
